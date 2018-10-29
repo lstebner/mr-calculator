@@ -14,6 +14,12 @@ export default class Calculator extends React.Component {
   render() {
     return (
       <div>
+        <div
+          className="trademark"
+          style={{ fontSize: "11px", color: "#a0a0a0" }}
+        >
+          basic calculator™
+        </div>
         <span className="screen">{this.state.screen_value}</span>
         <hr />
         <div className="buttons">
