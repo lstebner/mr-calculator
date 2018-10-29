@@ -166,5 +166,21 @@ export default class Calculator extends React.Component {
     console.loog("clicked equals");
   }
 
-  calculate() {}
+  calculate() {
+    let result;
+    if (this.state.number_a && this.state.number_b && this.state.operator) {
+      if (this.state.operator == "plus") {
+        result = this.state.number_a + this.state.number_b;
+      }
+
+      if (this.state.operatore == "minus") {
+        result = this.state.number_a - this.state.number_b;
+      }
+    }
+
+    this.setState({
+      result: result,
+      screen_value: result
+    });
+  }
 }
