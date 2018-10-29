@@ -24,43 +24,43 @@ export default class Calculator extends React.Component {
         <span className="screen">{this.state.screen_value}</span>
         <hr />
         <div className="buttons">
-          <div className="button" onClick={this.click_0}>
+          <div className="button" onClick={this.click_0.bind(this)}>
             0
           </div>
-          <div className="button" onClick={this.click_1}>
+          <div className="button" onClick={this.click_1.bind(this)}>
             1
           </div>
-          <div className="button" onClick={this.click_2}>
+          <div className="button" onClick={this.click_2.bind(this)}>
             2
           </div>
-          <div className="button" onClick={this.click_3}>
+          <div className="button" onClick={this.click_3.bind(this)}>
             3
           </div>
-          <div className="button" onClick={this.click_4}>
+          <div className="button" onClick={this.click_4.bind(this)}>
             4
           </div>
-          <div className="button" onClick={this.click_5}>
+          <div className="button" onClick={this.click_5.bind(this)}>
             5
           </div>
-          <div className="button" onClick={this.click_6}>
+          <div className="button" onClick={this.click_6.bind(this)}>
             6
           </div>
-          <div className="button" onClick={this.click_7}>
+          <div className="button" onClick={this.click_7.bind(this)}>
             7
           </div>
-          <div className="button" onClick={this.click_8}>
+          <div className="button" onClick={this.click_8.bind(this)}>
             8
           </div>
-          <div className="button" onClick={this.click_9}>
+          <div className="button" onClick={this.click_9.bind(this)}>
             9
           </div>
-          <div className="button" onClick={this.click_plus}>
+          <div className="button" onClick={this.click_plus.bind(this)}>
             +
           </div>
-          <div className="button" onClick={this.click_minus}>
+          <div className="button" onClick={this.click_minus.bind(this)}>
             -
           </div>
-          <div className="button" onClick={this.click_equals}>
+          <div className="button" onClick={this.click_equals.bind(this)}>
             =
           </div>
         </div>
