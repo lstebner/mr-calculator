@@ -163,7 +163,7 @@ export default class Calculator extends React.Component {
 
   click_equals() {
     this.calculate();
-    console.loog("clicked equals");
+    console.log("clicked equals");
   }
 
   calculate() {
