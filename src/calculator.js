@@ -13,6 +13,16 @@ export default class Calculator extends React.Component {
     };
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (
+      this.state.number_a != null &&
+      this.state.number_b != null &&
+      this.operator != null
+    ) {
+      this.calculate();
+    }
+  }
+
   render() {
     return (
       <div>
@@ -70,7 +80,7 @@ export default class Calculator extends React.Component {
   }
 
   click_0() {
-    if (this.state.number_a === null) {
+    if (this.state.operator === null) {
       this.setState({ number_a: 0 });
     } else {
       this.setState({ number_b: 0 });
@@ -80,23 +90,23 @@ export default class Calculator extends React.Component {
   }
 
   click_1() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 1 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 1 });
+    } else {
+      this.setState({ number_a: 1 });
     }
     console.log("clicked 1");
   }
   click_2() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 2 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 2 });
+    } else {
+      this.setState({ number_a: 2 });
     }
     console.log("clicked 2");
   }
   click_3() {
-    if (this.state.number_a === null) {
+    if (this.state.operator === null) {
       this.setState({ number_a: 3 });
     } else {
       this.setState({ number_b: 3 });
@@ -104,10 +114,10 @@ export default class Calculator extends React.Component {
     console.log("clicked 3");
   }
   click_4() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 4 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 4 });
+    } else {
+      this.setState({ number_a: 4 });
     }
     console.log("clicked 4");
   }
@@ -120,34 +130,34 @@ export default class Calculator extends React.Component {
     console.log("clicked 5");
   }
   click_6() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 6 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 6 });
+    } else {
+      this.setState({ number_a: 6 });
     }
     console.log("clicked 6");
   }
   click_7() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 7 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 7 });
+    } else {
+      this.setState({ number_a: 7 });
     }
     console.log("clicked 7");
   }
   click_8() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 8 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 8 });
+    } else {
+      this.setState({ number_a: 8 });
     }
     console.log("clicked 8");
   }
   click_9() {
-    if (this.state.number_a === null) {
-      this.setState({ number_a: 9 });
-    } else {
+    if (this.state.operator === null) {
       this.setState({ number_b: 9 });
+    } else {
+      this.setState({ number_a: 9 });
     }
     console.log("clicked 9");
   }
