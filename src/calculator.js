@@ -75,6 +75,9 @@ export default class Calculator extends React.Component {
           <div className="button" onClick={this.click_equals.bind(this)}>
             =
           </div>
+          <div className="button" onClick={this.click_clear.bind(this)}>
+            clear
+          </div>
         </div>
       </div>
     );
@@ -176,6 +179,16 @@ export default class Calculator extends React.Component {
   click_equals() {
     this.calculate();
     console.log("clicked equals");
+  }
+
+  click_clear() {
+    this.setState({
+      number_a: null,
+      number_b: null,
+      result: null,
+      operator: null,
+      screen_value: 0
+    });
   }
 
   calculate() {
