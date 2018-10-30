@@ -10,7 +10,8 @@ export default class Calculator extends React.Component {
       number_a: null,
       number_b: null,
       operator: null,
-      result: null
+      result: null,
+      auto_calculate: false // disabling some code with state to i can decide if i want to keep this feature later on
     };
   }
 
@@ -19,9 +20,35 @@ export default class Calculator extends React.Component {
       this.state.number_a != null &&
       this.state.number_b != null &&
       this.state.operator != null &&
-      this.state.result == null
+      this.state.result == null &&
+      this.state.auto_calculate
     ) {
       this.calculate();
+    } else {
+      if (this.state.operator == null) {
+        if (this.state.number_a != null) {
+          if (this.state.screen_value != this.state.number_a) {
+            this.setState({ screen_value: this.state.number_a });
+          }
+        }
+      } else if (this.state.operator != null) {
+        if (this.state.number_b == null) {
+          if (this.state.screen_value == this.state.number_a) {
+            if (this.state.operator == "plus") {
+              this.setState({ screen_value: "+" });
+            } else {
+              this.setState({ screen_value: "-" });
+            }
+          }
+        } else if (this.state.number_b != null) {
+          if (
+            this.state.screen_value != this.state.number_b &&
+            this.state.result == null
+          ) {
+            this.setState({ screen_value: this.state.number_b });
+          }
+        }
+      }
     }
   }
 
