@@ -91,17 +91,17 @@ export default class Calculator extends React.Component {
 
   click_1() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 1 });
-    } else {
       this.setState({ number_a: 1 });
+    } else {
+      this.setState({ number_b: 1 });
     }
     console.log("clicked 1");
   }
   click_2() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 2 });
-    } else {
       this.setState({ number_a: 2 });
+    } else {
+      this.setState({ number_b: 2 });
     }
     console.log("clicked 2");
   }
@@ -115,9 +115,9 @@ export default class Calculator extends React.Component {
   }
   click_4() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 4 });
-    } else {
       this.setState({ number_a: 4 });
+    } else {
+      this.setState({ number_b: 4 });
     }
     console.log("clicked 4");
   }
@@ -131,33 +131,33 @@ export default class Calculator extends React.Component {
   }
   click_6() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 6 });
-    } else {
       this.setState({ number_a: 6 });
+    } else {
+      this.setState({ number_b: 6 });
     }
     console.log("clicked 6");
   }
   click_7() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 7 });
-    } else {
       this.setState({ number_a: 7 });
+    } else {
+      this.setState({ number_b: 7 });
     }
     console.log("clicked 7");
   }
   click_8() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 8 });
-    } else {
       this.setState({ number_a: 8 });
+    } else {
+      this.setState({ number_b: 8 });
     }
     console.log("clicked 8");
   }
   click_9() {
     if (this.state.operator === null) {
-      this.setState({ number_b: 9 });
-    } else {
       this.setState({ number_a: 9 });
+    } else {
+      this.setState({ number_b: 9 });
     }
     console.log("clicked 9");
   }
