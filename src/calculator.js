@@ -203,12 +203,20 @@ export default class Calculator extends React.Component {
   }
 
   click_plus() {
-    this.setState({ operator: "plus" });
+    this.setState({ operator: "plus" }, () => {
+      if (this.state.number_a !== null && this.state.number_b !== null) {
+        this.calculate(false);
+      }
+    });
     console.log("clicked plus");
   }
 
   click_minus() {
-    this.setState({ operator: "minus" });
+    this.setState({ operator: "minus" }, () => {
+      if (this.state.number_a !== null && this.state.number_b !== null) {
+        this.calculate(false);
+      }
+    });
     console.log("clicked minus");
   }
 
@@ -227,7 +235,7 @@ export default class Calculator extends React.Component {
     });
   }
 
-  calculate() {
+  calculate(final = true) {
     let result;
     if (this.state.number_a && this.state.number_b && this.state.operator) {
       if (this.state.operator == "plus") {
@@ -239,9 +247,18 @@ export default class Calculator extends React.Component {
       }
     }
 
-    this.setState({
-      result: result,
-      screen_value: result
-    });
+    if (final) {
+      this.setState({
+        result: result,
+        screen_value: result
+      });
+    } else {
+      this.setState({
+        number_a: result,
+        number_b: null,
+        result: null,
+        screen_value: result
+      });
+    }
   }
 }
