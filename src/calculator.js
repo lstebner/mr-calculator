@@ -1,4 +1,5 @@
 import React from "react";
+import $ from 'jquery';
 import style from "./calculator.css";
 
 export default class Calculator extends React.Component {
@@ -49,6 +50,23 @@ export default class Calculator extends React.Component {
           }
         }
       }
+
+      this.mark_selected_operator()
+    }
+  }
+
+  mark_selected_operator() {
+    if (this.state.result === null) {
+      if (this.state.operator === "plus") {
+        $(".plus_operator").addClass("selected")
+      }
+      if (this.state.operator === "minus") {
+        $(".minus_operator").addClass("selected")
+      }
+    }
+    else {
+      $(".minus_operator.selected").removeClass("selected")
+      $(".plus_operator.selected").removeClass("selected")
     }
   }
 
@@ -99,10 +117,10 @@ export default class Calculator extends React.Component {
             <div className="button" onClick={this.click_9.bind(this)}>
               9
             </div>
-            <div className="button" onClick={this.click_plus.bind(this)}>
+            <div className="button plus_operator" onClick={this.click_plus.bind(this)}>
               +
             </div>
-            <div className="button" onClick={this.click_minus.bind(this)}>
+            <div className="button minus_operator" onClick={this.click_minus.bind(this)}>
               -
             </div>
           </div>
@@ -119,7 +137,7 @@ export default class Calculator extends React.Component {
     );
   }
 
-  click_0() {
+  click_0(e) {
     if (this.state.operator === null) {
       this.setState({ number_a: 0 });
     } else {

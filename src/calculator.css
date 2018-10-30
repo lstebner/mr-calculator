@@ -16,3 +16,8 @@
   border: 1px solid #0a0a0a;
   margin: 8px 2px;
 }
+
+.button.selected {
+  background-color: #c0c0c0;
+  color: #f0f0f0;
+}
