@@ -9,7 +9,7 @@ export default class Calculator extends React.Component {
       number_a: null,
       number_b: null,
       operator: null,
-      result: 0
+      result: null
     };
   }
 
@@ -17,7 +17,8 @@ export default class Calculator extends React.Component {
     if (
       this.state.number_a != null &&
       this.state.number_b != null &&
-      this.operator != null
+      this.state.operator != null &&
+      this.state.result == null
     ) {
       this.calculate();
     }
