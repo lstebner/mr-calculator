@@ -1,4 +1,5 @@
 import React from "react";
+import style from "./calculator.css";
 
 export default class Calculator extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ export default class Calculator extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="calculator-main">
         <div
           className="trademark"
           style={{ fontSize: "11px", color: "#a0a0a0" }}
@@ -36,47 +37,55 @@ export default class Calculator extends React.Component {
         <span className="screen">{this.state.screen_value}</span>
         <hr />
         <div className="buttons">
-          <div className="button" onClick={this.click_0.bind(this)}>
-            0
+          <div className="button-group">
+            <div className="button" onClick={this.click_0.bind(this)}>
+              0
+            </div>
+            <div className="button" onClick={this.click_1.bind(this)}>
+              1
+            </div>
+            <div className="button" onClick={this.click_2.bind(this)}>
+              2
+            </div>
+            <div className="button" onClick={this.click_3.bind(this)}>
+              3
+            </div>
           </div>
-          <div className="button" onClick={this.click_1.bind(this)}>
-            1
+          <div className="button-group">
+            <div className="button" onClick={this.click_4.bind(this)}>
+              4
+            </div>
+            <div className="button" onClick={this.click_5.bind(this)}>
+              5
+            </div>
+            <div className="button" onClick={this.click_6.bind(this)}>
+              6
+            </div>
+            <div className="button" onClick={this.click_7.bind(this)}>
+              7
+            </div>
           </div>
-          <div className="button" onClick={this.click_2.bind(this)}>
-            2
+          <div className="button-group">
+            <div className="button" onClick={this.click_8.bind(this)}>
+              8
+            </div>
+            <div className="button" onClick={this.click_9.bind(this)}>
+              9
+            </div>
+            <div className="button" onClick={this.click_plus.bind(this)}>
+              +
+            </div>
+            <div className="button" onClick={this.click_minus.bind(this)}>
+              -
+            </div>
           </div>
-          <div className="button" onClick={this.click_3.bind(this)}>
-            3
-          </div>
-          <div className="button" onClick={this.click_4.bind(this)}>
-            4
-          </div>
-          <div className="button" onClick={this.click_5.bind(this)}>
-            5
-          </div>
-          <div className="button" onClick={this.click_6.bind(this)}>
-            6
-          </div>
-          <div className="button" onClick={this.click_7.bind(this)}>
-            7
-          </div>
-          <div className="button" onClick={this.click_8.bind(this)}>
-            8
-          </div>
-          <div className="button" onClick={this.click_9.bind(this)}>
-            9
-          </div>
-          <div className="button" onClick={this.click_plus.bind(this)}>
-            +
-          </div>
-          <div className="button" onClick={this.click_minus.bind(this)}>
-            -
-          </div>
-          <div className="button" onClick={this.click_equals.bind(this)}>
-            =
-          </div>
-          <div className="button" onClick={this.click_clear.bind(this)}>
-            clear
+          <div className="button-group">
+            <div className="button" onClick={this.click_equals.bind(this)}>
+              =
+            </div>
+            <div className="button" onClick={this.click_clear.bind(this)}>
+              C
+            </div>
           </div>
         </div>
       </div>
